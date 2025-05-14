@@ -2,103 +2,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Tú Cuentas - App de Apoyo Emocional</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f0f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #6a1b9a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header img {
-            height: 50px;
-            vertical-align: middle;
-        }
-
-        header h1 {
-            display: inline;
-            margin-left: 15px;
-            font-size: 24px;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #6a1b9a;
-        }
-
-        button {
-            background-color: #8e24aa;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #6a1b9a;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #eee;
-            color: #555;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tú Cuentas - Prototipo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f0fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #8e24aa;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .formulario input, .formulario textarea, .formulario button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .testimonios {
+      background-color: #ede7f6;
+      padding: 1rem;
+      border-left: 5px solid #6a1b9a;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/mental-health.png" alt="Logo">
-        <h1>Tú Cuentas</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Bienvenida</h2>
-            <p>Esta es una app hecha por y para estudiantes que ofrece apoyo emocional, talleres y contenido preventivo sobre el consumo de alcohol.</p>
-        </section>
-        <section>
-            <h2>Contenido Emocional</h2>
-            <p>Accede a videos, ejercicios y guías sobre manejo emocional y prevención.</p>
-            <button onclick="alert('Funcionalidad en desarrollo')">Ver Contenido</button>
-        </section>
-        <section>
-            <h2>Chat Anónimo</h2>
-            <p>Habla con un estudiante guía de forma anónima y segura.</p>
-            <button onclick="alert('Funcionalidad en desarrollo')">Iniciar Chat</button>
-        </section>
-        <section>
-            <h2>Talleres Virtuales</h2>
-            <p>Participa en talleres interactivos sobre autocuidado y prevención.</p>
-            <button onclick="alert('Funcionalidad en desarrollo')">Registrarse</button>
-        </section>
-    </main>
-    <footer>
-        © 2025 Tú Cuentas - EBC Toluca
-    </footer>
+  <header>
+    <h1>📱 Tú Cuentas</h1>
+    <p>Apoyo para estudiantes que enfrentan problemas con el alcohol</p>
+  </header>
+
+  <nav>
+    <a href="#login">Iniciar sesión</a>
+    <a href="#videos">Videos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#talleres">Talleres</a>
+  </nav>
+
+  <div class="container">
+    <section id="login">
+      <h2>Iniciar Sesión</h2>
+      <form class="formulario">
+        <input type="text" placeholder="Usuario o correo">
+        <input type="password" placeholder="Contraseña">
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="videos">
+      <h2>Videos de Apoyo</h2>
+      <div class="testimonios">
+        <p><strong>"Me ayudó a darme cuenta de mis hábitos"</strong> – Andrea, estudiante de Psicología</p>
+      </div>
+      <div class="testimonios">
+        <p><strong>"Hablar con otro estudiante me dio confianza"</strong> – Luis, estudiante de Ingeniería</p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>¿Cómo te sientes hoy?</h2>
+      <form class="formulario">
+        <textarea rows="4" placeholder="Escríbelo aquí..."></textarea>
+        <button type="submit">Enviar mensaje anónimo</button>
+      </form>
+    </section>
+
+    <section id="talleres">
+      <h2>Calendario de Talleres Virtuales</h2>
+      <ul>
+        <li>🗓️ Martes 14 - 5:00 PM: Hablemos del alcohol</li>
+        <li>🗓️ Viernes 17 - 7:00 PM: Apoyo entre estudiantes</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tú Cuentas. Proyecto universitario.</p>
+  </footer>
 </body>
 </html>
+
